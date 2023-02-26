@@ -20,8 +20,7 @@
 <p *ngIf="serverCreated">Server was created, server name is {{ serverName }}.</p>
 <!-- <p [innerText]="allowNewServer"></p> -->
 <!-- <p>{{ serverCreationStatus }}</p> -->
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
 <input 
     type="text"
     class="form-control"
