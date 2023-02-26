@@ -17,6 +17,8 @@ export class ServersComponent {
   userName = '';
   serverCreated = false;
   servers = ['Testserver', 'Testserver 2'];
+  passwordOn = false;
+  buttonClicks = [];
 
   constructor() {
     setTimeout(() => {
@@ -40,5 +42,10 @@ export class ServersComponent {
 
   resetUsername() {
     this.userName = '';
+  }
+
+  displayPassword(event: any) {
+    this.buttonClicks.push(this.buttonClicks.length + 1);
+    this.passwordOn = !this.passwordOn;
   }
 }

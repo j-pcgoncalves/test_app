@@ -35,3 +35,17 @@
 >
     Reset Username
 </button>
+<button 
+    class="btn btn-primary"
+    (click)="displayPassword($event)"
+>
+    Display Details
+</button>
+<p *ngIf="passwordOn">The secret password is Tuna!</p>
+<p 
+    *ngFor="let click of buttonClicks"
+    [ngStyle]="{backgroundColor: click >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': click >= 5}"
+>
+    {{ click }}
+</p>
