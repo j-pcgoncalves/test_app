@@ -45,7 +45,7 @@ export class ServersComponent {
   }
 
   displayPassword(event: any) {
-    this.buttonClicks.push(this.buttonClicks.length + 1);
+    this.buttonClicks.push(new Date());
     this.passwordOn = !this.passwordOn;
   }
 }
