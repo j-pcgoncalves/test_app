@@ -9,7 +9,7 @@
     class="form-control"
     [(ngModel)]="serverName"
 >
-<p>{{ serverName }}</p>
+<!-- <p>{{ serverName }}</p> -->
 <button 
     class="btn btn-primary"
     [disabled]="!allowNewServer"
@@ -21,3 +21,17 @@
 <p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
+<input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="userName"
+    (input)="checkIfEmpty()"
+>
+<p>{{ userName }}</p>
+<button
+    class="btn btn-primary"
+    [disabled]="!checkIfEmpty()"
+    (click)="resetUsername()"
+>
+    Reset Username
+</button>
